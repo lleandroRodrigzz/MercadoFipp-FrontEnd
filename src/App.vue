@@ -1,26 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Menu/>
+  <form-categoria msg="Cadastro de Categoria"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import FormCategoria from './components/FormCategoria.vue'
+import Menu from './components/layouts/Menu.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Menu,
+    FormCategoria
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'JetBrains Mono', monospace, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
