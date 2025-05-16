@@ -15,12 +15,12 @@
     </form>
   </div>
   <div class="container p-4">
-    <button class="btn btn-outline-primary" v-if="formOn == false" style="display: flex; justify-content: flex-end"
+    <button class="btn btn-primary" v-if="formOn == false" style="display: flex; justify-content: flex-end"
       @click="mostrarForm(true), this.id = 0">
       Nova Categoria
     </button>
 
-    <button class="btn btn-outline-danger" v-else style="display: flex; justify-content: flex-end" @click="mostrarForm(false)">
+    <button class="btn btn-danger" v-else style="display: flex; justify-content: flex-end" @click="mostrarForm(false)">
       Fechar Formulario
     </button>
   </div>
