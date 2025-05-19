@@ -1,17 +1,20 @@
 <template>
   <Menu/>
-  <form-categoria msg="Cadastro de Categoria"/>
+  <FormCategoria msg="Cadastro de Categoria"/>
+  <FormUsuario msg="Cadastro de Usuario"/>
 </template>
 
 <script>
 import FormCategoria from './components/FormCategoria.vue'
+import FormUsuario from './components/FormUsuario.vue';
 import Menu from './components/layouts/Menu.vue';
 
 export default {
   name: 'App',
   components: {
     Menu,
-    FormCategoria
+    FormCategoria,
+    FormUsuario
   }
 }
 </script>
@@ -22,6 +25,5 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 </style>

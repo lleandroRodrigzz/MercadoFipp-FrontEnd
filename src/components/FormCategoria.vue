@@ -8,15 +8,16 @@
       </div>
       <div class="mb-3">
         <label for="name" class="form-label" style="color: white;">Nome</label>
-        <input type="text" id="name" name="name" v-model="nome" class="form-control" placeholder="Nome da Categoria..."
+        <input type="text" maxlength="20" id="name" name="name" v-model="nome" class="form-control" placeholder="Nome da Categoria..."
           required>
       </div>
-      <button type="submit" class="btn btn-success">Cadastrar</button>
+      <button v-if="modoEdicao == false" type="submit" class="btn btn-success">Cadastrar</button>
+      <button v-else type="submit" class="btn btn-warning">Editar</button>
     </form>
   </div>
   <div class="container p-4">
     <button class="btn btn-primary" v-if="formOn == false" style="display: flex; justify-content: flex-end"
-      @click="mostrarForm(true), this.id = 0">
+      @click="mostrarForm(true)">
       Nova Categoria
     </button>
 
@@ -71,13 +72,25 @@ export default {
     msg: String,
   },
   data() {
-    return { id: 0, nome: "", formOn: false, categorias: [] };
+    return { 
+            id: 0, 
+            nome: "", 
+            formOn: false,
+            modoEdicao: false, 
+            categorias: [] 
+          };
   },
   methods: {
     mostrarForm(flag) {
+      if (flag == false) {
+        this.id = 0;
+        this.nome = "";
+        this.modoEdicao = false;
+      }
       this.formOn = flag;
     },
     gravar() {
+      this.modoEdicao = false;
       const url = "http://localhost:8080/apis/categoria";
       const data = { id: this.id, nome: this.nome };
       axios
@@ -103,6 +116,7 @@ export default {
         });
     },
     alterar(id) {
+      this.modoEdicao = true;
       this.formOn = true;
       axios
         .get("http://localhost:8080/apis/categoria/" + id)
