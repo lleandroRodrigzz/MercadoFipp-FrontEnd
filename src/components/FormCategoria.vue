@@ -8,8 +8,8 @@
       </div>
       <div class="mb-3">
         <label for="name" class="form-label" style="color: white;">Nome</label>
-        <input type="text" maxlength="20" id="name" name="name" v-model="nome" class="form-control" placeholder="Nome da Categoria..."
-          required>
+        <input type="text" maxlength="20" id="name" name="name" v-model="nome" class="form-control"
+          placeholder="Nome da Categoria..." required>
       </div>
       <button v-if="modoEdicao == false" type="submit" class="btn btn-success">Cadastrar</button>
       <button v-else type="submit" class="btn btn-warning">Editar</button>
@@ -26,7 +26,7 @@
     </button>
   </div>
   <div class="container">
-    <h1 class="alert alert-secondary">{{ msg }}</h1>
+    <h1 class="alert alert-secondary" style="background-color: #0d6efd; color: white;">Cadastro de Categoria</h1>
     <table class="table table-secondary table-bordered table-striped table-hover align-middle text-center ">
       <thead class="table-dark">
         <tr>
@@ -72,13 +72,13 @@ export default {
     msg: String,
   },
   data() {
-    return { 
-            id: 0, 
-            nome: "", 
-            formOn: false,
-            modoEdicao: false, 
-            categorias: [] 
-          };
+    return {
+      id: 0,
+      nome: "",
+      formOn: false,
+      modoEdicao: false,
+      categorias: [],
+    };
   },
   methods: {
     mostrarForm(flag) {

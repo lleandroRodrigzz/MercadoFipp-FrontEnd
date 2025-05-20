@@ -37,7 +37,7 @@
         </button>
     </div>
     <div class="container">
-        <h1 class="alert alert-secondary">{{ msg }}</h1>
+        <h1 class="alert alert-secondary" style="background-color: #0d6efd; color: white;">Cadastro de Usuario</h1>
         <table class="table table-secondary table-bordered table-striped table-hover align-middle text-center ">
             <thead class="table-dark">
                 <tr>
@@ -160,7 +160,7 @@ export default {
                     alert(error);
                 });
         },
-        alterar(id) {
+        alterar(id) {               /*Serve para carregar o formulario com dados de um usuario antes de editar*/
             this.modoEdicao = true;
             this.formOn = true;
             axios

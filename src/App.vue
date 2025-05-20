@@ -1,7 +1,6 @@
 <template>
-  <Menu/>
-  <FormCategoria msg="Cadastro de Categoria"/>
-  <FormUsuario msg="Cadastro de Usuario"/>
+  <Menu />
+  <RouterView />
 </template>
 
 <script>
@@ -20,10 +19,14 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'JetBrains Mono', monospace, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-}
+  html, body, #app {
+    height: 100%;
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    background-color: #ededed;
+    color: white; /* opcional: deixa texto branco por padrão */
+  }
 </style>

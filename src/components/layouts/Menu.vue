@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar navbar-expand-lg" style="background-color: #ffe600;">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
         <img src="../../assets/MercadoFippLogo.png" alt="LogoMercadoFipp" height="80rem">
@@ -16,23 +16,22 @@
           <li class="nav-item">
             <a class="nav-link" href="#">Comprar</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Anunciar</a>
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Ações
+              Admin
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Comprar</a></li>
-              <li><a class="dropdown-item" href="#">Anunciar</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><router-link class="dropdown-item" to="/form-usuario">Usuários</router-link></li>
+              <li><router-link class="dropdown-item" to="/form-categoria">Categorias</router-link></li>
             </ul>
           </li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Oque procura?" aria-label="Search" />
-          <button class="btn btn-outline-primary" type="submit">
+          <button class="btn btn-primary" type="submit">
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search"
               viewBox="0 0 16 16">
               <path
