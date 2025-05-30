@@ -1,4 +1,5 @@
 <template>
+  <Menu/>
   <div v-if="formOn == true" class="container border border-dark rounded p-4 mt-4 bg-dark">
     <form @submit.prevent="this.gravar()">
       <div class="mb-3">
@@ -65,9 +66,11 @@
 
 <script>
 import axios from "axios";
+import Menu from "@/components/layouts/Menu.vue";
 
 export default {
   name: "FormCategoria",
+  components: {Menu},
   props: {
     msg: String,
   },
